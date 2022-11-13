@@ -66,6 +66,6 @@ let deleteCategoryById = async (req,res, next) => {
     res.status(200).send("data deleted");
     res.end();
 }
-//createTable();
+createTable();
 
 module.exports = { getAllCategories, getAllCategoryById, addNewCategory,deleteCategoryById};

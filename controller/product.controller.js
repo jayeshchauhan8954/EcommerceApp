@@ -67,5 +67,5 @@ let insertProducts = async () => {
     console.log("Added data successfully")
     getAllProducts();
 }
-// createTable();
+createTable();
 module.exports = {getAllProducts, getProductById};
