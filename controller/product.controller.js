@@ -3,8 +3,8 @@ let dbConnection = require("./../config/db.config");
 
 let getAllProducts = async (req,res,next) => {
     let products = await Products.findAll();
-    res.writeHead(200, { 'Content-Type' : 'application/json' });
-    res.write(JSON.stringify(products));
+    // res.writeHead(200, { 'Content-Type' : 'application/json' });
+    res.send(JSON.stringify(products)).status(200);
     res.end();
 }
 
@@ -16,8 +16,8 @@ let getProductById = async (req,res,next) => {
             id : id
             }
     })
-    res.writeHead(200, { 'Content-Type' : 'application/json' });
-    res.write(JSON.stringify(products));
+    // res.writeHead(200, { 'Content-Type' : 'application/json' });
+    res.send(JSON.stringify(products)).status(200);
     res.end();
     };
 
